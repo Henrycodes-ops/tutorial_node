@@ -8,4 +8,5 @@ console.log(names);
 
 
 
-// sayHi('Susan');
+sayHi(names.john);
+sayHi(names.peter);
