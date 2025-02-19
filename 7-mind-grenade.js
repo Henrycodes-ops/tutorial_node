@@ -6,5 +6,7 @@ function addValues() {
   
 }
 
+addValues()
+
 // module.exports = addValues
 module.exports = addValues() 
