@@ -5,4 +5,6 @@ const peter = "Peter";
 
 console.log(module);
 
-module.exports = { john, peter };
+// export
+
+module.exports = { john, peter, secret };
