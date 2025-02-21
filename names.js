@@ -7,4 +7,6 @@ console.log(module);
 
 // export
 
+
+
 module.exports = { john, peter, secret };
