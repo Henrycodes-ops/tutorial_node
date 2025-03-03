@@ -11,6 +11,8 @@ try {
   homePage = "<h1>Error loading page</h1>";
 }
 
+// createServer method creates a server object
+
 const server = http.createServer((req, res) => {
   // res.writeHead(200, {'content-type': 'text/html'})
   // res.end('<h1>Home page</h1>')
