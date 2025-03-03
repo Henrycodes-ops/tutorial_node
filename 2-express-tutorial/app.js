@@ -5,7 +5,7 @@ console.log("Express tutorial");
 
 let homePage;
 try {
-  homePage = readFileSync("./index.html");
+  homePage = readFileSync("./navbar-app/index.html");
 } catch (err) {
   console.error("Error reading index.html:", err);
   homePage = "<h1>Error loading page</h1>";
@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
   const url = req.url;
 
   if (url === "/") {
-    res.writeHead(200, { "content-type": "text/plain" });
+    res.writeHead(200, { "content-type": "text/html" });
     res.write(homePage);
     res.end();
   }
@@ -26,6 +26,7 @@ const server = http.createServer((req, res) => {
   else if (url === "/about") {
     res.writeHead(200, { "content-type": "text/html" });
     res.write("<h1>About page</h1>");
+    res.end();
   }
 
   // 404
