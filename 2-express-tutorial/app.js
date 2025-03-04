@@ -13,6 +13,8 @@ const app = express();
 // app.use = middleware
 // app.listen = start server
 
+
+// Setup static and middleware
 app.use(express.static('./navbar-app'))
 
 app.get("/", (req, res) => {
