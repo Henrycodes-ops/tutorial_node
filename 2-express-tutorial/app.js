@@ -1,4 +1,6 @@
 import express from "express";
+import path from 'path'
+
 
 const app = express();
 
@@ -11,17 +13,17 @@ const app = express();
 // app.use = middleware
 // app.listen = start server
 
+app.use(express.static('./navbar-app'))
+
 app.get("/", (req, res) => {
-  res.send("<h1>Home page</h1>");
+  res.sendFile(path.resolve('./navbar-app/index.html'));
 });
 
-app.get("/about", (req, res) => { 
-  res.send("<h1>About page</h1>");
-});
+
 
 app.all("*", (req, res) => {
   res.status(404).send("<h1>Page not found</h1>");
-}
+});
 
 app.listen(4000, () => {
   console.log("Server is listening on http://localhost:4000");
