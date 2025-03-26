@@ -28,7 +28,8 @@ app.get("/api/products/:productID", (req, res) => {
   console.log(req);
   console.log(req.params);
 
-  const {productID} = req.params
+  const { productID } = req.params
+  hhbu
   
   
   const singleProduct = products.find((product) => product.id === Number(productID))
